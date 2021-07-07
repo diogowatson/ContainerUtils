@@ -3,9 +3,6 @@ from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient, _
 from azure.core.exceptions import ResourceNotFoundError, ResourceExistsError
 
 
-CONNECTION_STRING = 'DefaultEndpointsProtocol=https;AccountName=gsta2daplatdatahub01;AccountKey=rdIdp3/hSvMMp243AOj28chS8XreL7pwsg21K1F2lbAEoRaamoNz3ZcTI4k2K+JPxdSdimxaYL3r9V+PhiiMDw==;EndpointSuffix=core.windows.net'
-
-
 class ContainerUtils:
     def __init__(self, connection_string):
         self.connections_string = connection_string
@@ -63,7 +60,7 @@ class ContainerUtils:
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    conn = ContainerUtils(CONNECTION_STRING)
+    conn = ContainerUtils()
     # cont = conn.list_containers()
     # for c in cont:
     #     print(c)
